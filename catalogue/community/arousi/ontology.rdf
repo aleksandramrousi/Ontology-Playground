@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xml:base="http://example.org/ontology/my-ontology/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:ont="http://example.org/ontology/my-ontology/"
+    xmlns:opmeta="https://microsoft.github.io/Ontology-Playground/ns/metadata#"
+>
+
+    <owl:Ontology rdf:about="http://example.org/ontology/my-ontology/">
+        <rdfs:label>My Ontology</rdfs:label>
+    </owl:Ontology>
+
+    <!-- Ontology Playground metadata vocabulary -->
+    <rdfs:Class rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#DataBinding">
+        <rdfs:label>Ontology Playground data binding</rdfs:label>
+    </rdfs:Class>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#icon">
+        <rdfs:label>icon</rdfs:label>
+        <rdfs:comment>Presentation icon for an entity type.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#color">
+        <rdfs:label>color</rdfs:label>
+        <rdfs:comment>Presentation color for an entity type.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#isIdentifier">
+        <rdfs:label>isIdentifier</rdfs:label>
+        <rdfs:comment>Whether an entity property is used as its Playground identifier.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#unit">
+        <rdfs:label>unit</rdfs:label>
+        <rdfs:comment>Display unit associated with a numeric property.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#enumValues">
+        <rdfs:label>enumValues</rdfs:label>
+        <rdfs:comment>Comma-delimited enum values used only by Playground round trips.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#propertyType">
+        <rdfs:label>propertyType</rdfs:label>
+        <rdfs:comment>Playground property type: string, integer, decimal, double, date, datetime, boolean, or enum.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#cardinality">
+        <rdfs:label>cardinality</rdfs:label>
+        <rdfs:comment>Playground relationship multiplicity: one-to-one, one-to-many, many-to-one, or many-to-many.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#fromEntityId">
+        <rdfs:label>fromEntityId</rdfs:label>
+        <rdfs:comment>Playground ID of a relationship source entity.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#toEntityId">
+        <rdfs:label>toEntityId</rdfs:label>
+        <rdfs:comment>Playground ID of a relationship target entity.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#relationshipAttributeOf">
+        <rdfs:label>relationshipAttributeOf</rdfs:label>
+        <rdfs:comment>Playground ID of the relationship described by an attribute.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#attributeType">
+        <rdfs:label>attributeType</rdfs:label>
+        <rdfs:comment>Playground relationship attribute type: string, integer, decimal, double, date, datetime, boolean, or enum.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#generatedSubset">
+        <rdfs:label>generatedSubset</rdfs:label>
+        <rdfs:comment>Whether this RDF document was generated from the Playground visual model.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#sourceVersionIri">
+        <rdfs:label>sourceVersionIri</rdfs:label>
+        <rdfs:comment>Version IRI of the source ontology represented by the visual model.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#sourceVersionInfo">
+        <rdfs:label>sourceVersionInfo</rdfs:label>
+        <rdfs:comment>Version label of the source ontology represented by the visual model.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#sourceImport">
+        <rdfs:label>sourceImport</rdfs:label>
+        <rdfs:comment>Import IRI recorded from the source ontology without dereferencing it.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#boundClass">
+        <rdfs:label>boundClass</rdfs:label>
+        <rdfs:comment>Domain class targeted by a Playground data binding.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#boundEntityId">
+        <rdfs:label>boundEntityId</rdfs:label>
+        <rdfs:comment>Playground entity ID targeted by a data binding.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#source">
+        <rdfs:label>source</rdfs:label>
+        <rdfs:comment>Source name retained by a Playground data binding.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#table">
+        <rdfs:label>table</rdfs:label>
+        <rdfs:comment>Table name retained by a Playground data binding.</rdfs:comment>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://microsoft.github.io/Ontology-Playground/ns/metadata#columnMapping">
+        <rdfs:label>columnMapping</rdfs:label>
+        <rdfs:comment>Property-to-column mapping retained by a Playground data binding.</rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <!-- Entity Types (Classes) -->
+    <owl:Class rdf:about="http://example.org/ontology/my-ontology/New-entity-3">
+        <rdfs:label>Member</rdfs:label>
+        <opmeta:icon>👤</opmeta:icon>
+        <opmeta:color>#5C2D91</opmeta:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/my-ontology/New-entity-2">
+        <rdfs:label>Author</rdfs:label>
+        <opmeta:icon>📝</opmeta:icon>
+        <opmeta:color>#107C10</opmeta:color>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/ontology/my-ontology/New-entity-1">
+        <rdfs:label>Book</rdfs:label>
+        <opmeta:icon>📋</opmeta:icon>
+        <opmeta:color>#0078D4</opmeta:color>
+    </owl:Class>
+
+    <!-- Data Properties -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-3_memberId">
+        <rdfs:label>memberId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-3"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <opmeta:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</opmeta:isIdentifier>
+        <opmeta:propertyType>string</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-3_name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-3"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <opmeta:propertyType>string</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-3_joinDate">
+        <rdfs:label>joinDate</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-3"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <opmeta:propertyType>date</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-2_authorId">
+        <rdfs:label>authorId</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-2"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <opmeta:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</opmeta:isIdentifier>
+        <opmeta:propertyType>string</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-2_name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-2"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <opmeta:propertyType>string</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-2_nationality">
+        <rdfs:label>nationality</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-2"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <opmeta:propertyType>string</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-1_isbn">
+        <rdfs:label>isbn</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-1"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <opmeta:isIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</opmeta:isIdentifier>
+        <opmeta:propertyType>string</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-1_title">
+        <rdfs:label>title</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-1"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <opmeta:propertyType>string</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology/my-ontology/new-entity-1_publishedYear">
+        <rdfs:label>publishedYear</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-1"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <opmeta:propertyType>integer</opmeta:propertyType>
+    </owl:DatatypeProperty>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/my-ontology/rel-relates-to-2">
+        <rdfs:label>borrowedBy</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-1"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/my-ontology/New-entity-3"/>
+        <opmeta:cardinality>many-to-many</opmeta:cardinality>
+        <opmeta:fromEntityId>new-entity-1</opmeta:fromEntityId>
+        <opmeta:toEntityId>new-entity-3</opmeta:toEntityId>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontology/my-ontology/rel-relates-to-1">
+        <rdfs:label>writtenBy</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/ontology/my-ontology/New-entity-1"/>
+        <rdfs:range rdf:resource="http://example.org/ontology/my-ontology/New-entity-2"/>
+        <opmeta:cardinality>many-to-one</opmeta:cardinality>
+        <opmeta:fromEntityId>new-entity-1</opmeta:fromEntityId>
+        <opmeta:toEntityId>new-entity-2</opmeta:toEntityId>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
